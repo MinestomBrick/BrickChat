@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.gufli.brickchat.BrickChat'
+    }
+}
+
+dependencies {
+    implementation project(':api')
+
+    compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
+    compileOnly 'com.github.MinestomBrick.BrickPlaceholders:api'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    archiveClassifier.set("")
+    archiveBaseName.set("${rootProject.name}")
+    archiveVersion.set("${rootProject.version}")
+
+    doLast {
+        copy {
+            from "build/libs/" + archiveFileName.get()
+            into "../../server/extensions"
+        }
+    }
+}

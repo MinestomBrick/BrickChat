@@ -1,0 +1,15 @@
+{
+  "channels": {
+    "default": {
+      "format": "{playername} > {chatmessage}"
+    },
+    "admin": {
+      "format": "[ADMINCHAT] {playername} > {chatmessage}",
+      "activator": "!",
+      "protect": {
+        "type": "READ_AND_TALK",
+        "permission": "brickchat.channel.admin"
+      }
+    }
+  }
+}
