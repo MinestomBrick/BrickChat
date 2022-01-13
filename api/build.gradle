@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    compileOnly 'com.github.Minestom:Minestom:1.18-SNAPSHOT'
+    compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
 }
