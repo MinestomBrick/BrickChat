@@ -16,7 +16,7 @@ public interface ChatManager {
 
     Collection<ChatChannel> channels();
 
-    void handle(Player player, String message);
+    void execute(Player player, String message);
 
     void send(ChatChannel channel, Component text);
 

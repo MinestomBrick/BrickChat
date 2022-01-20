@@ -2,7 +2,6 @@ package com.gufli.brickchat.app;
 
 import com.gufli.brickchat.api.ChatManager;
 import com.gufli.brickchat.api.channel.ChatChannel;
-import com.gufli.brickchat.api.channel.SimpleChatChannel;
 import com.gufli.brickchat.api.event.PlayerChannelChatEvent;
 import com.gufli.brickplaceholders.api.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
@@ -46,7 +45,7 @@ public class BrickChatManager implements ChatManager {
         return Collections.unmodifiableCollection(chatChannels);
     }
 
-    void handle(PlayerChatEvent event) {
+    void execute(PlayerChatEvent event) {
         Player player = event.getPlayer();
 
         PlayerChannelChatEvent channelChatEvent = dispatch(player, event.getMessage());
@@ -63,7 +62,7 @@ public class BrickChatManager implements ChatManager {
     }
 
     @Override
-    public void handle(Player player, String message) {
+    public void execute(Player player, String message) {
         PlayerChannelChatEvent event = dispatch(player, message);
         if (event == null) return;
         send(event.recipients(), event.player(), event.format(), event.message());

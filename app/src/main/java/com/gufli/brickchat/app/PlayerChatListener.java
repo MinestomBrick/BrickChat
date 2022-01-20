@@ -19,7 +19,7 @@ public class PlayerChatListener implements EventListener<PlayerChatEvent> {
 
     @Override
     public @NotNull Result run(@NotNull PlayerChatEvent event) {
-        chatManager.handle(event);
+        chatManager.execute(event);
         return Result.SUCCESS;
     }
 }

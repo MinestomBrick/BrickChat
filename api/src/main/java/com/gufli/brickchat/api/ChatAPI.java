@@ -34,15 +34,15 @@ public class ChatAPI {
         return chatManager.channels();
     }
 
-    public static void handle(Player player, String message) {
-        chatManager.handle(player, message);
+    public static void execute(Player player, String message) {
+        chatManager.execute(player, message);
     }
 
     public static void send(ChatChannel channel, Component text) {
         chatManager.send(channel, text);
     }
 
-    public void send(ChatChannel channel,Player player, String message) {
+    public static void send(ChatChannel channel, Player player, String message) {
         chatManager.send(channel, player, message);
     }
 

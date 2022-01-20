@@ -36,6 +36,28 @@ Available **protect** types are:
 * TALK: You can read, but need permission to talk
 * READ_AND_TALK: You need permission to read and talk
 
+## API
+
+```
+repositories {
+    maven { url "https://repo.jorisg.com/snapshots" }
+}
+
+dependencies {
+    implementation 'com.gufli.brickchat:api:1.0-SNAPSHOT'
+}
+```
+
+```java
+ChatAPI.registerChatChannel(new SimpleChatChannel("trade", "$", "[TRADE] {playername} > {chatmessage}"));
+
+ChatChannel channel = ChatAPI.channelByName("trade");
+ChatAPI.send(channel, "hello fellow traders!");
+
+MinecraftServer.getGlobalEventHandler().addListener(PlayerChannelChatEvent.class,
+        e -> System.out.println(e.chatChannel().name() + ": " + e.player() + " > " + e.message()));
+```
+
 ## Credits
 
 * The [Minestom](https://github.com/Minestom/Minestom) project
