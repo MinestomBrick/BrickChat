@@ -34,7 +34,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: BrickPermissions
+          name: BrickChat
           path: 'app/build/libs/BrickChat-*.jar'
           if-no-files-found: 'error'
 
