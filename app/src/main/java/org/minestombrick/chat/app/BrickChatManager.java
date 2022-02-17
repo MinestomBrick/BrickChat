@@ -3,12 +3,12 @@ package org.minestombrick.chat.app;
 import org.minestombrick.chat.api.api.ChatManager;
 import org.minestombrick.chat.api.api.channel.ChatChannel;
 import org.minestombrick.chat.api.api.event.PlayerChannelChatEvent;
-import com.gufli.brickplaceholders.api.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.entity.Player;
 import net.minestom.server.event.player.PlayerChatEvent;
 import net.minestom.server.tag.Tag;
+import org.minestombrick.placeholders.api.PlaceholderAPI;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArraySet;
@@ -99,7 +99,7 @@ public class BrickChatManager implements ChatManager {
                 });
 
         if ( MinecraftServer.getExtensionManager().hasExtension("brickplaceholders") ) {
-            result = PlaceholderAPI.replace(player, result);
+            result = PlaceholderAPI.get().replace(player, result);
         }
 
         return result;
