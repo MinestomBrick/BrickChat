@@ -49,20 +49,13 @@ dependencies {
 ```
 
 ```java
-ChatAPI.registerChatChannel(new SimpleChatChannel("trade", "$", "[TRADE] {playername} > {chatmessage}"));
+ChatAPI.get().registerChatChannel(new SimpleChatChannel("trade", "$", "[TRADE] {playername} > {chatmessage}"));
 
-ChatChannel channel = ChatAPI.channelByName("trade");
-ChatAPI.send(channel, "hello fellow traders!");
+ChatChannel channel = ChatAPI.get().channelByName("trade");
+ChatAPI.get().send(channel, "hello fellow traders!");
 
 MinecraftServer.getGlobalEventHandler().addListener(PlayerChannelChatEvent.class,
         e -> System.out.println(e.chatChannel().name() + ": " + e.player() + " > " + e.message()));
 ```
 
-## Credits
-
-* The [Minestom](https://github.com/Minestom/Minestom) project
-
-## Contributing
-
-Check our [contributing info](CONTRIBUTING.md)
-
+Check the [javadocs](https://minestombrick.github.io/BrickChat/)

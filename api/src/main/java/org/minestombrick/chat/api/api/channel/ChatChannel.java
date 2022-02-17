@@ -1,4 +1,4 @@
-package com.gufli.brickchat.api.channel;
+package org.minestombrick.chat.api.api.channel;
 
 import net.kyori.adventure.text.Component;
 import net.minestom.server.entity.Player;

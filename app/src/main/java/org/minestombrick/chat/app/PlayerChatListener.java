@@ -1,4 +1,4 @@
-package com.gufli.brickchat.app;
+package org.minestombrick.chat.app;
 
 import net.minestom.server.event.EventListener;
 import net.minestom.server.event.player.PlayerChatEvent;

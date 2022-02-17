@@ -1,9 +1,9 @@
-package com.gufli.brickchat.app;
+package org.minestombrick.chat.app;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.gufli.brickchat.api.ChatAPI;
-import com.gufli.brickchat.api.channel.SimpleChatChannel;
+import org.minestombrick.chat.api.api.ChatAPI;
+import org.minestombrick.chat.api.api.channel.SimpleChatChannel;
 import net.kyori.adventure.text.Component;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.extensions.Extension;
@@ -59,7 +59,7 @@ public class BrickChat extends Extension {
                 }
 
                 SimpleChatChannel scc = new SimpleChatChannel(name, activator, Component.text(format));
-                ChatAPI.registerChatChannel(scc);
+                ChatAPI.get().registerChatChannel(scc);
 
                 if ( channel.has("protect") ) {
                     JsonObject protect = channel.get("protect").getAsJsonObject();
