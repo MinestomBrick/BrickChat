@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.minestombrick.chat.api.api"},{"l":"org.minestombrick.chat.api.api.channel"},{"l":"org.minestombrick.chat.api.api.event"}];updateSearchResults();
