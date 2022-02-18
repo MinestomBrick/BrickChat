@@ -1,5 +1,5 @@
 {
-  "entrypoint": "com.gufli.brickchat.app.BrickChat",
+  "entrypoint": "org.minestombrick.chat.app.BrickChat",
   "name": "BrickChat",
   "version": "1.0.0",
   "dependencies": [
