@@ -4,7 +4,7 @@ An extension for [Minestom](https://github.com/Minestom/Minestom) to manage chat
 
 ## Install
 
-Get the latest jar file from [Github actions](https://github.com/MinestomBrick/BrickWorlds/actions) 
+Get the [release](https://github.com/MinestomBrick/BrickChat/releases)
 and place it in the extension folder of your minestom server.
 
 ## Config
